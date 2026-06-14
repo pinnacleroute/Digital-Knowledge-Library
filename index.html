@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="A complete digital taxation knowledge library by Anil Malhotra.">
+  <meta name="robots" content="noindex,nofollow,noarchive">
   <title>Digital Knowledge Library</title>
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -13,7 +14,7 @@
     @media(max-width:760px){.container{width:min(100% - 28px,1180px)}.topbar{display:none}.hero{padding:58px 0 65px}.hero-grid,.detail-hero,.lesson-grid,.cart-layout,.checkout-layout,.login-shell{grid-template-columns:1fr}.hero .title{font-size:2.7rem}.visual{margin-top:20px}.visual-img{width:92%;height:300px}.float-panel{width:90%}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2n){border-right:0}.grid-2,.grid-3,.grid-4,.grid-5,.books-grid{grid-template-columns:1fr}.section{padding:58px 0}.overview{grid-template-columns:repeat(2,1fr)}.chapter{grid-template-columns:44px 1fr}.chapter-side{grid-column:2;text-align:left;min-width:0}.cta{padding:35px;display:block}.cta .button-row{margin-top:25px}.detail-cover{width:230px;height:330px}.detail-copy .title{font-size:2.5rem}.dash{grid-template-columns:1fr}.sidebar{min-height:auto;padding:18px}.sidebar .brand{margin-bottom:0}.side-nav{display:none;grid-template-columns:1fr;margin-top:18px}.dash-toggle{display:inline-flex}.dash-main{padding:22px 14px}.dash-head{align-items:flex-start}.dash-grid{grid-template-columns:1fr 1fr}.login-art,.login-form{padding:40px 24px;min-height:480px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}.form-grid{grid-template-columns:1fr}.copyright{display:block}.book-card{grid-template-columns:105px 1fr}.book-cover{height:180px}.nav{gap:8px}.brand span{font-size:.86rem}.membership-card.recommended{transform:none}.order-box{position:static}}
   </style>
 </head>
-<body>
+<body class="preview-mode">
   <a class="skip-link" href="#app">Skip to main content</a>
   <div class="topbar"><div class="container"><span>Professional taxation education by Anil Malhotra</span><span>25 books today. A 100-book knowledge vision.</span></div></div>
   <header class="header">
@@ -45,6 +46,15 @@
     </div>
   </footer>
   <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="site-preview-gate" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+    <div class="site-preview-card">
+      <div class="preview-mark" aria-hidden="true">DK</div>
+      <div class="eyebrow">Private preview</div>
+      <h1 id="preview-title">This website is currently unavailable.</h1>
+      <p>The Digital Knowledge Library is being held in private preview while the project is under review.</p>
+      <span class="preview-status">Preview paused</span>
+    </div>
+  </div>
   <script>
     // Mock catalogue data: expand this array to grow the library to 100 books.
     const images={
