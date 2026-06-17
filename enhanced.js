@@ -203,12 +203,12 @@
           <div class="badges">${badge(item.category, "gold")}${item.formats.map(function (format) { return badge(format, format === "Video" ? "blue" : format === "Membership" ? "green" : ""); }).join("")}</div>
           <h2 class="title">${escapeText(item.title)}</h2>
           <p class="lead">${escapeText(item.description)}</p>
-          <div class="detail-meta"><span>By Anil Malhotra</span><span>${item.chapters} chapters</span><span>4.${7 + item.id % 3} learner rating</span><span>Updated 2026</span></div>
+          <div class="detail-meta"><span>Professional tax library</span><span>${item.chapters} chapters</span><span>4.${7 + item.id % 3} learner rating</span><span>Updated 2026</span></div>
           <div class="price-row"><span class="price">${money(item.price)}</span><span class="meta">Full book PDF</span></div>
           <div class="button-row">
             <button class="btn btn-primary" onclick="addCart('${escapeText(item.title)} PDF',${item.price},'PDF','book-${item.id}-pdf')">Buy Full PDF</button>
             <button class="btn btn-gold" onclick="addCart('${escapeText(item.title)} Course',99,'Course','book-${item.id}-course')">Buy Course Package</button>
-            <a class="btn btn-light" href="https://www.amazon.com/s?k=${encodeURIComponent(item.title + " Anil Malhotra")}" target="_blank" rel="noopener noreferrer">View on Amazon ↗</a>
+            <a class="btn btn-light" href="https://www.amazon.com/s?k=${encodeURIComponent(item.title)}" target="_blank" rel="noopener noreferrer">View on Amazon ↗</a>
           </div>
         </div>
       </div></section>
