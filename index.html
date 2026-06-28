@@ -14,7 +14,19 @@
     @media(max-width:760px){.container{width:min(100% - 28px,1180px)}.topbar{display:none}.hero{padding:58px 0 65px}.hero-grid,.detail-hero,.lesson-grid,.cart-layout,.checkout-layout,.login-shell{grid-template-columns:1fr}.hero .title{font-size:2.7rem}.visual{margin-top:20px}.visual-img{width:92%;height:300px}.float-panel{width:90%}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2n){border-right:0}.grid-2,.grid-3,.grid-4,.grid-5,.books-grid{grid-template-columns:1fr}.section{padding:58px 0}.overview{grid-template-columns:repeat(2,1fr)}.chapter{grid-template-columns:44px 1fr}.chapter-side{grid-column:2;text-align:left;min-width:0}.cta{padding:35px;display:block}.cta .button-row{margin-top:25px}.detail-cover{width:230px;height:330px}.detail-copy .title{font-size:2.5rem}.dash{grid-template-columns:1fr}.sidebar{min-height:auto;padding:18px}.sidebar .brand{margin-bottom:0}.side-nav{display:none;grid-template-columns:1fr;margin-top:18px}.dash-toggle{display:inline-flex}.dash-main{padding:22px 14px}.dash-head{align-items:flex-start}.dash-grid{grid-template-columns:1fr 1fr}.login-art,.login-form{padding:40px 24px;min-height:480px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}.form-grid{grid-template-columns:1fr}.copyright{display:block}.book-card{grid-template-columns:105px 1fr}.book-cover{height:180px}.nav{gap:8px}.brand span{font-size:.86rem}.membership-card.recommended{transform:none}.order-box{position:static}}
   </style>
 </head>
-<body>
+<body class="site-locked">
+  <div class="site-lock" id="siteLock" role="dialog" aria-modal="true" aria-labelledby="siteLockTitle">
+    <form class="site-lock-card" id="siteLockForm" autocomplete="off">
+      <div class="brand lock-brand"><i class="brandmark"></i><span>Digital Knowledge<br>Library</span></div>
+      <p class="eyebrow">Private access</p>
+      <h1 id="siteLockTitle">Enter password to continue</h1>
+      <p class="site-lock-copy">This knowledge library is password protected.</p>
+      <label class="sr-only" for="sitePassword">Website password</label>
+      <input id="sitePassword" type="password" placeholder="Password" required autofocus>
+      <p class="site-lock-error" id="siteLockError" role="alert"></p>
+      <button class="btn btn-primary" type="submit">Unlock Website</button>
+    </form>
+  </div>
   <a class="skip-link" href="#app">Skip to main content</a>
   <div class="topbar"><div class="container"><span>Professional taxation education for modern learners</span><span>25 books today. A 100-book knowledge vision.</span></div></div>
   <header class="header">
