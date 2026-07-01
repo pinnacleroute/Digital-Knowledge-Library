@@ -3,9 +3,6 @@
 (function () {
   "use strict";
 
-  const SITE_PASSWORD = "DKL2026!";
-  let siteUnlocked = false;
-  let siteLockInitialized = false;
   const routeState = { name: "home", id: null, chapter: 1 };
   let bundleFilter = "all";
   let lastOrder = readJSON("dklLastOrder", null);
@@ -21,52 +18,6 @@
 
   function saveJSON(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
-  }
-
-  function setPageInert(locked) {
-    [".skip-link", ".topbar", ".header", "#app", ".footer", ".toast"].forEach(function (selector) {
-      document.querySelectorAll(selector).forEach(function (node) {
-        if (locked) {
-          node.setAttribute("inert", "");
-          node.setAttribute("aria-hidden", "true");
-        } else {
-          node.removeAttribute("inert");
-          node.removeAttribute("aria-hidden");
-        }
-      });
-    });
-  }
-
-  function initSiteLock() {
-    const lock = document.getElementById("siteLock");
-    const form = document.getElementById("siteLockForm");
-    const input = document.getElementById("sitePassword");
-    const error = document.getElementById("siteLockError");
-
-    if (!lock || !form || !input) {
-      siteUnlocked = true;
-      return;
-    }
-    if (siteLockInitialized) return;
-
-    siteLockInitialized = true;
-    setPageInert(true);
-    requestAnimationFrame(function () { input.focus(); });
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      if (input.value === SITE_PASSWORD) {
-        siteUnlocked = true;
-        document.body.classList.remove("site-locked");
-        lock.hidden = true;
-        setPageInert(false);
-        input.value = "";
-        return;
-      }
-      error.textContent = "Incorrect password. Please try again.";
-      input.value = "";
-      input.focus();
-    });
   }
 
   function escapeText(value) {
@@ -627,9 +578,6 @@
   };
 
   window.render = function () {
-    if (!siteUnlocked) {
-      initSiteLock();
-    }
     const hash = (location.hash || "#home").slice(1);
     const parts = hash.split("/");
     routeState.name = parts[0] || "home";
